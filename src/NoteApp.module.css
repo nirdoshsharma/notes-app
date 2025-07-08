@@ -1,0 +1,199 @@
+/* NoteApp.module.css */
+
+/* Global Reset */
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  padding: 1rem;
+}
+
+.heading {
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  max-width: fit-content;
+  margin: 2rem auto 1rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: -0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-right: 0.5rem;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.noteCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cardContent {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+.category {
+  align-self: flex-start;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: #6c63ff;
+}
+
+.categoryPersonal {
+  background-color: #f97316;
+}
+
+.categoryWork {
+  background-color: #10b981;
+}
+
+.categoryLearning {
+  background-color: #3b82f6;
+}
+
+.filterContainer {
+  max-width: 600px;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.filterLabel {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.filterSelect {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .noteCard {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .filterContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding: 0 1rem;
+  }
+}
