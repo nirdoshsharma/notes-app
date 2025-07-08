@@ -20,7 +20,6 @@ function App() {
   const [editIndex, setEditIndex] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("");
 
-  // ✅ Load from localStorage on initial render
   useEffect(() => {
     const savedNotes = localStorage.getItem("notes");
     if (savedNotes) {
@@ -28,7 +27,6 @@ function App() {
     }
   }, []);
 
-  // ✅ Save to localStorage whenever noteList changes
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(noteList));
   }, [noteList]);
